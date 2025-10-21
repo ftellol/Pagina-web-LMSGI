@@ -1,0 +1,7 @@
+<strong> (etiqueta utilizada para darle importancia a una palabra sobre el resto)
+#h1, h2, h3 son encabezados
+#p son parrafos
+#Usa section> para agrupar bloques temáticos
+#Usa article> para contenidos independientes (entradas de blog, fichas, servicios...)
+#Usa aside> para información complementaria
+#Usa header> y footer> dentro de artículos o secciones cuando aporten contexto
