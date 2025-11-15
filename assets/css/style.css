@@ -1,0 +1,103 @@
+/* ================================
+        ESTILOS GLOBALES
+================================= */
+:root {
+    --color-azul: #316388;
+    --color-naranja: #F26E22;
+    --color-amarillo: #F29A2E;
+    --color-rojo: #F24C27;
+    --color-claro: #FFDF91;
+}
+
+/* ================================
+        CABECERA
+================================= */
+.cabecera {
+    padding: 6px 37px;
+    background-image: url("../images/header6.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Necesario para bajarle la intensidad a la imagen y lo posicionamos en la posición 0 */
+.cabecera:before {
+    content: "";
+    position: absolute;
+    inset:0;
+    background: rgba(0,0,0,0.60);
+    z-index: 0;
+}
+
+/* Para posicionar el texto sobre la imagen en la posición 1 */
+.cabecera > * {
+    position: relative;
+    z-index: 1;
+}
+
+.titulo-menu {
+    font-size: 2rem;
+    background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   /* Arreglo de fallos */
+    background-clip: text;  /* Arreglo de fallos */
+    color: transparent;
+}
+
+header.cabecera .logopokewiki {
+    height: 120px;
+    width: auto;
+    margin-right: 20px;
+}
+
+/* Menú */
+header.cabecera nav ul.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces del menú */
+header.cabecera nav ul.menu li a {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   /* Arreglo de fallos */
+    background-clip: text;  /* Arreglo de fallos */
+    color: transparent;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+header.cabecera nav ul.menu li a:hover {
+    background: linear-gradient(to bottom, var(--color-rojo), var(--color-naranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* ================================
+   SECCIONES
+================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #C1DBE3;
+}
+.introduccion-PokeWiki{
+    font-family: "Fira Sans Condensed", sans-serif;
+    color: var(--color-naranja);
+
+}
+/* ================================
+   FOOTER
+================================= */

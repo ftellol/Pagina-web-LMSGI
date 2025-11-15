@@ -3,117 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <title>Contacto | PokeWiki</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header>
-    <img src="assets/images/PokeWiki_Charmander.png" alt="">
-    <nav>
-        <h1>Tabla de acceso rápido</h1>
-        <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./servicios.html">Tienda</a></li>
-            <li><a href="./about.html">Sobre nosotros</a></li>
-            <li><a href="./blog.html">Blog y Noticias</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-            <li><a href=./regiones.html >Regiones</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <section>
-        <h2>Contacto — Reportar un problema</h2>
-        <img src="assets/images/Problemas_tecnicos.png" alt="Imagen de problemas técnicos">
-        <p>En PokéWiki nos esforzamos por mantener la información actualizada y precisa. Si encuentras algún error, problema técnico o información incorrecta, puedes avisarnos a través de este formulario. Tu ayuda nos permite mejorar cada día y ofrecer una experiencia más completa para todos los fans de Pokémon.</p>
-        <p>¿Has encontrado un error o información incorrecta en PokéWiki? Rellena el siguiente formulario para que podamos revisarlo y corregirlo lo antes posible. ¡Gracias por tu colaboración!</p>
-    </section>
+    <header class="cabecera">
+        <img src="assets/images/PokeWiki_Charmander.png" alt="Logo de PokeWiki" class="logopokewiki">
+        <nav>
+            <h1 class="titulo-menu">Tabla de acceso rápido</h1>
+            <ul class="menu">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./servicios.html">Tienda</a></li>
+                <li><a href="./about.html">Sobre nosotros</a></li>
+                <li><a href="./blog.html">Blog y Noticias</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href=./regiones.html >Regiones</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Contacto — Reportar un problema</h2>
+            <img src="assets/images/Problemas_tecnicos.png" alt="Imagen de problemas técnicos">
+            <p>En PokéWiki nos esforzamos por mantener la información actualizada y precisa. Si encuentras algún error, problema técnico o información incorrecta, puedes avisarnos a través de este formulario. Tu ayuda nos permite mejorar cada día y ofrecer una experiencia más completa para todos los fans de Pokémon.</p>
+            <p>¿Has encontrado un error o información incorrecta en PokéWiki? Rellena el siguiente formulario para que podamos revisarlo y corregirlo lo antes posible. ¡Gracias por tu colaboración!</p>
+        </section>
 
-    <section>
-        <h2>Formulario de reporte</h2>
-        <form>
-            <fieldset>
-                <legend>Información del usuario</legend>
+        <section>
+            <h2>Formulario de reporte</h2>
+            <form>
+                <fieldset>
+                    <legend>Información del usuario</legend>
 
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </fieldset>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
 
-            <fieldset>
-                <legend>Detalles del reporte</legend>
+                <fieldset>
+                    <legend>Detalles del reporte</legend>
 
-                <label for="tipo">Tipo de problema:</label>
-                <select id="tipo" name="tipo" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="error-información">Información incorrecta</option>
-                    <option value="error-técnico">Error técnico</option>
-                    <option value="enlace-roto">Enlace roto</option>
-                    <option value="otro">Otro</option>
-                </select>
+                    <label for="tipo">Tipo de problema:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="error-información">Información incorrecta</option>
+                        <option value="error-técnico">Error técnico</option>
+                        <option value="enlace-roto">Enlace roto</option>
+                        <option value="otro">Otro</option>
+                    </select>
 
-                <label for="pagina">Página afectada (URL o nombre):</label>
-                <input type="text" id="pagina" name="pagina" placeholder="Ejemplo: Regiones o Pokédex" required>
+                    <label for="pagina">Página afectada (URL o nombre):</label>
+                    <input type="text" id="pagina" name="pagina" placeholder="Ejemplo: Regiones o Pokédex" required>
 
-                <label for="descripción">Descripción del problema:</label>
-                <textarea id="descripción" name="descripción" placeholder="Describe el error o la información incorrecta..." required></textarea>
-            </fieldset>
+                    <label for="descripción">Descripción del problema:</label>
+                    <textarea id="descripción" name="descripción" placeholder="Describe el error o la información incorrecta..." required></textarea>
+                </fieldset>
 
-            <fieldset>
-                <legend>Confirmación</legend>
-                <label>
-                    <input type="checkbox" name="terminos" required>
-                    Confirmo que la información proporcionada es correcta.
-                </label>
-            </fieldset>
+                <fieldset>
+                    <legend>Confirmación</legend>
+                    <label>
+                        <input type="checkbox" name="terminos" required>
+                        Confirmo que la información proporcionada es correcta.
+                    </label>
+                </fieldset>
 
-            <button type="submit">Enviar reporte</button>
-        </form>
-    </section>
+                <button type="submit">Enviar reporte</button>
+            </form>
+        </section>
 
-    <section>
-        <h2>Preguntas frecuentes</h2>
-        <img src="assets/images/Preguntas_frecuentes.webp" alt="Imagen de Ash, preguntas frecuentes">
-        <article>
-            <h3>¿Qué tipo de problemas puedo reportar?</h3>
-            <p>Puedes informar sobre errores en la Pokédex, datos incorrectos sobre regiones o problemas técnicos en la web.</p>
-        </article>
-        <article>
-            <h3>¿Cuánto tardan en responder?</h3>
-            <p>Normalmente respondemos en un plazo de 24 a 48 horas.</p>
-        </article>
-        <article>
-            <h3>¿Puedo enviar sugerencias o información nueva?</h3>
-            <p>¡Sí! Apreciamos la colaboración de la comunidad. Si tienes datos verificados o correcciones, indícalo en el formulario.</p>
-        </article>
-        <article>
-            <h3>¿Necesito crear una cuenta para reportar un error?</h3>
-            <p>No, puedes hacerlo directamente desde el formulario de contacto sin registrarte.</p>
-        </article>
-        <article>
-            <h3>¿Hay otra forma de contactarnos?</h3>
-            <p>¡Sí, claro! Puedes encontrar nuestras redes sociales al final de la página, donde podrás escribirnos sobre cualquier duda o sugerencia que tengas</p>
-        </article>
-    </section>
-</main>
-<footer>
-    <section>
-        <h3>¡Síguenos en nuestras redes sociales!</h3>
-        <ul>
-            <li><a href="https://www.facebook.com/Pokemon/?locale=es_ES">Facebook</a></li>
-            <li><a href="https://x.com/Pokemon">Twitter</a></li>
-            <li><a href="https://www.instagram.com/pokemon/">Instagram</a></li>
-        </ul>
-    </section>
-    <address>
-        <ul>
-            <li><a href="./contacto.html">Página de Contacto</a></li>
-            <li><a href="mailto:Pokewiki@gmail.com">pokewiki@gmail.com</a></li>
-            <li><a href="tel:+34672637827">Tel: +34 672 637 827</a></li>
-        </ul>
-    </address>
-        <p>&copy; PokeWiki. Todos los derechos reservados.</p>
-        <p>Diseñado y desarrollado por Fabio Tello - 1º DAW</p>
-</footer>
+        <section>
+            <h2>Preguntas frecuentes</h2>
+            <img src="assets/images/Preguntas_frecuentes.webp" alt="Imagen de Ash, preguntas frecuentes">
+            <article>
+                <h3>¿Qué tipo de problemas puedo reportar?</h3>
+                <p>Puedes informar sobre errores en la Pokédex, datos incorrectos sobre regiones o problemas técnicos en la web.</p>
+            </article>
+            <article>
+                <h3>¿Cuánto tardan en responder?</h3>
+                <p>Normalmente respondemos en un plazo de 24 a 48 horas.</p>
+            </article>
+            <article>
+                <h3>¿Puedo enviar sugerencias o información nueva?</h3>
+                <p>¡Sí! Apreciamos la colaboración de la comunidad. Si tienes datos verificados o correcciones, indícalo en el formulario.</p>
+            </article>
+            <article>
+                <h3>¿Necesito crear una cuenta para reportar un error?</h3>
+                <p>No, puedes hacerlo directamente desde el formulario de contacto sin registrarte.</p>
+            </article>
+            <article>
+                <h3>¿Hay otra forma de contactarnos?</h3>
+                <p>¡Sí, claro! Puedes encontrar nuestras redes sociales al final de la página, donde podrás escribirnos sobre cualquier duda o sugerencia que tengas</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <h3>¡Síguenos en nuestras redes sociales!</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/Pokemon/?locale=es_ES">Facebook</a></li>
+                <li><a href="https://x.com/Pokemon">Twitter</a></li>
+                <li><a href="https://www.instagram.com/pokemon/">Instagram</a></li>
+            </ul>
+        </section>
+        <address>
+            <ul>
+                <li><a href="./contacto.html">Página de Contacto</a></li>
+                <li><a href="mailto:Pokewiki@gmail.com">pokewiki@gmail.com</a></li>
+                <li><a href="tel:+34672637827">Tel: +34 672 637 827</a></li>
+            </ul>
+        </address>
+            <p>&copy; PokeWiki. Todos los derechos reservados.</p>
+            <p>Diseñado y desarrollado por Fabio Tello - 1º DAW</p>
+    </footer>
 </body>
 </html>
