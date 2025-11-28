@@ -9,6 +9,11 @@
     --color-claro: #FFDF91;
 }
 
+body {
+    margin: 0;
+
+}
+
 /* ================================
         CABECERA
 ================================= */
@@ -48,24 +53,22 @@
     color: transparent;
 }
 
-header.cabecera .logopokewiki {
+.logopokewiki {
     height: 120px;
     width: auto;
-    margin-right: 20px;
 }
 
 /* Menú */
-header.cabecera nav ul.menu {
+.cabecera nav ul.menu {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    margin: 0;
     padding: 0;
 }
 
 /* Enlaces del menú */
-header.cabecera nav ul.menu li a {
+.cabecera nav ul.menu li a {
     font-size: 1.3rem;
     font-weight: bold;
     padding: 5px 10px;
@@ -80,7 +83,7 @@ header.cabecera nav ul.menu li a {
 }
 
 /* Hover */
-header.cabecera nav ul.menu li a:hover {
+.cabecera nav ul.menu li a:hover {
     background: linear-gradient(to bottom, var(--color-rojo), var(--color-naranja));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -88,16 +91,159 @@ header.cabecera nav ul.menu li a:hover {
 /* ================================
    SECCIONES
 ================================= */
-body {
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #C1DBE3;
+    background: #ffffff;
+    display: block;
 }
-.introduccion-PokeWiki{
-    font-family: "Fira Sans Condensed", sans-serif;
-    color: var(--color-naranja);
 
+
+/* ================================
+   SERVICIOS
+================================= */
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* perspective en el contenedor para que funcione la 3D */
+    perspective: 1000px;
+}
+
+section .wrapper {
+    min-height: 400px;
+}
+
+
+.inner {
+    --w: 120px;
+    --h: 170px;
+    --translateZ: calc((var(--w) + var(--h)) + 0px);
+    --rotateX: -15deg;
+    /* perspective aplicada en el wrapper; aquí preservamos 3D */
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    top: 25%;
+    left: calc(50% - (var(--w) / 2) - 2.5px);
+    z-index: 2;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--rotateX));
+    animation: rotating 20s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotateX(var(--rotateX)) rotateY(0);
+    }
+    to {
+        transform: rotateX(var(--rotateX)) rotateY(1turn);
+    }
+}
+
+.card {
+    position: absolute;
+    /* usar rgb(...) porque luego usamos rgba(...) en el gradiente */
+    border: 2px solid rgb(var(--color-card));
+    border-radius: 12px;
+    overflow: hidden;
+    inset: 0;
+    /* aseguramos que la transform esté en una línea y termine con ; */
+    transform: rotateY(calc((360deg / var(--quantity)) * var(--index))) translateZ(var(--translateZ));
+    backface-visibility: hidden;
+    display: block;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;       /* contain = no se corta */
+    background-position: center;    /* centrada */
+    background-repeat: no-repeat;
+
+    /* Mantener el gradiente que tenías */
+    background-image:
+            radial-gradient(
+                    circle,
+                    rgba(var(--color-card), 0.2) 0%,
+                    rgba(var(--color-card), 0.6) 80%,
+                    rgba(var(--color-card), 0.9) 100%
+            );
+}
+
+/* estilos opcionales para ver mejor las tarjetas */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
 }
 /* ================================
    FOOTER
 ================================= */
+.pie {
+    background-color: #11232F;
+    padding: 6px 30px;
+    position: relative;
+    color: var(--color-claro);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contenedor-pie {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Títulos */
+.pie h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Quitar listas */
+.pie ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces del footer */
+.pie ul li a {
+    color: var(--color-claro);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.pie ul li a:hover {
+    color: var(--color-naranja);
+}
+
+/* Bloques organizados uno al lado del otro (si hay espacio) */
+.paginas-sociales,
+.contacto {
+    max-width: 300px;
+}
+
+/* COPYRIGHT y créditos */
+.pie p {
+    margin: 0;
+    opacity: 0.9;
+    text-align: center;
+}
