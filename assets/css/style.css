@@ -293,3 +293,16 @@ section .wrapper {
     opacity: 0.9;
     text-align: center;
 }
+
+.creditos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    order: 2;
+}
+
+.contacto {
+    order: 3;
+}
+
