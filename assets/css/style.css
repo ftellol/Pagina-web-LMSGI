@@ -25,6 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
     position: relative;
     box-sizing: border-box;
 }
@@ -44,50 +45,82 @@ body {
     z-index: 1;
 }
 
-.titulo-menu {
-    font-size: 2rem;
-    background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   /* Arreglo de fallos */
-    background-clip: text;  /* Arreglo de fallos */
-    color: transparent;
-}
-
+/* Logo */
 .logopokewiki {
-    height: 120px;
+    height: 90px;
     width: auto;
 }
 
-/* Menú */
-.cabecera nav ul.menu {
-    list-style: none;
+/* ===== BUSCADOR CENTRADO ===== */
+.buscador {
+    flex: 1;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 0;
+    justify-content: center;
 }
 
-/* Enlaces del menú */
-.cabecera nav ul.menu li a {
+.buscador input {
+    width: 60%;
+    max-width: 500px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+/* ===== ICONO MENÚ ===== */
+.icono-menu {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: var(--color-naranja);;
+}
+
+.btn-menu {
+    display: none;
+}
+
+/* ===== MENÚ DESPLEGABLE ===== */
+.menu-desplegable {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 35, 47, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    display: none;
+}
+
+.menu-desplegable ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.menu-desplegable ul li a {
     font-size: 1.3rem;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
+    text-decoration: none;
+    color: var(--color-claro);
+    transition: 0.3s ease;
     background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   /* Arreglo de fallos */
-    background-clip: text;  /* Arreglo de fallos */
-    color: transparent;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Hover */
-.cabecera nav ul.menu li a:hover {
+.menu-desplegable ul li a:hover {
     background: linear-gradient(to bottom, var(--color-rojo), var(--color-naranja));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+.btn-menu:checked ~ .menu-desplegable {
+    display: block;
+}
+
 /* ================================
    SECCIONES
 ================================= */
@@ -237,10 +270,8 @@ section .wrapper {
 .pie {
     background-color: #11232F;
     padding: 6px 30px;
-    position: relative;
     color: var(--color-claro);
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -287,7 +318,7 @@ section .wrapper {
     max-width: 300px;
 }
 
-/* COPYRIGHT y créditos */
+/* Organización por orden */
 .pie p {
     margin: 0;
     opacity: 0.9;
@@ -300,6 +331,10 @@ section .wrapper {
     justify-content: center;
     text-align: center;
     order: 2;
+}
+
+.paginas-sociales {
+    order: 1;
 }
 
 .contacto {
