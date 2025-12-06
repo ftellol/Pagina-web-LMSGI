@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
 /* ================================
         ESTILOS GLOBALES
 ================================= */
@@ -7,12 +10,14 @@
     --color-amarillo: #F29A2E;
     --color-rojo: #F24C27;
     --color-claro: #FFDF91;
-    --color-fondo: #FCF7F1
+    --color-fondo: #FCF7F1;
+
+    --fuente-principal: "Science Gothic", sans-serif;
+    --fuente-secundaria: "Nunito Sans", sans-serif;
 }
 
 body {
     margin: 0;
-
 }
 
 /* ================================
@@ -158,18 +163,63 @@ main {
 .introduccion-PokeWiki {
     width: 80%;
     color: var(--color-naranja);
-    padding: 8px 0px;
+    padding: 8px;
     text-align: center;
     align-items: center;
     margin: auto;
 }
 
 .introduccion-PokeWiki h2 {
+    font-family: var(--fuente-principal);
     font-size: 2rem;
     margin-bottom: 15px;
-    background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-azul);
+}
+
+.introduccion-PokeWiki p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: var(--fuente-secundaria);
+}
+
+.tipos-pokemon {
+    width: 100%;
+    background-color: var(--color-claro);
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.tipos-pokemon h2 {
+    font-family: var(--fuente-principal);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--color-azul);
+}
+
+.figura-tipo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.figura-tipo img {
+    width: 80px;
+    max-width: 100%;
+    height: auto;
+}
+
+.figura-tipo figcaption {
+    font-family: var(--fuente-secundaria);
+    font-size: 1rem;
+    color: var(--color-azul);
+    margin: 0;
 }
 
 .index_section_uno,
@@ -178,46 +228,79 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid var(--color-azul);
+    border: 3px solid var(--color-rojo);
     border-radius: 20px;
-    padding: 30px;
+    padding: 0;
     gap: 20px;
+    overflow: hidden;
 }
 
 .index_section_uno h2,
 .index_section_dos h2 {
-    font-size: 2rem;
+    font-family: var(--fuente-principal);
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-claro);
+    color: var(--color-azul);
+    font-size: 1.5rem;
     margin: 0;
     text-align: center;
-    border-bottom: 2px solid var(--color-naranja);
 }
 
 .index_section_uno img,
 .index_section_dos img {
     width: 100%;
-    max-width: 100%;
-    height: auto;
+    max-height: 250px;
     display: block;
-
+    object-fit: contain;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .index_section_uno p,
 .index_section_dos p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     width: 90%;
+    font-family: var(--fuente-secundaria);
 }
 
-.contenedor-secciones-index {
+.contenedor_secciones_index {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 40px;
     flex-wrap: wrap;
     width: 100%;
     box-sizing: border-box;
 }
 
+.index_section_uno li,
+.index_section_dos li {
+    padding: 0 15px;
+    font-family: var(--fuente-secundaria);
+}
+
+.index_section_uno ol li{
+    margin-bottom: 15px;
+}
+
+.index_section_dos ul li {
+    list-style-type: "✨  ";
+    padding-left: 4px;
+}
+
+@media (max-width: 768px) {
+    .index_section_uno,
+    .index_section_dos {
+        width: 90%;
+    }
+
+    .contenedor_secciones_index {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 /* ================================
    SERVICIOS
