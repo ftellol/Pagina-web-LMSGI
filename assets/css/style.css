@@ -143,6 +143,7 @@ body {
 /* ================================
    SECCIONES
 ================================= */
+/* main principal general */
 main {
     padding: 10px 20px;
     background-color: var(--color-fondo);
@@ -150,10 +151,10 @@ main {
     align-items: center;
     gap: 40px;
     box-sizing: border-box;
-
-
+    display: flex;
 }
 
+/* ===== INDEX =====  */
 .introduccion-PokeWiki {
     width: 80%;
     color: var(--color-naranja);
@@ -169,8 +170,54 @@ main {
     background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.index_section_uno,
+.index_section_dos {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--color-azul);
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+}
+
+.index_section_uno h2,
+.index_section_dos h2 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    border-bottom: 2px solid var(--color-naranja);
+}
+
+.index_section_uno img,
+.index_section_dos img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 
 }
+
+.index_section_uno p,
+.index_section_dos p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 90%;
+}
+
+.contenedor-secciones-index {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 
 /* ================================
    SERVICIOS
