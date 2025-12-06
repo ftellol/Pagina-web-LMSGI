@@ -7,6 +7,7 @@
     --color-amarillo: #F29A2E;
     --color-rojo: #F24C27;
     --color-claro: #FFDF91;
+    --color-fondo: #FCF7F1
 }
 
 body {
@@ -45,17 +46,35 @@ body {
     z-index: 1;
 }
 
+.contenedor-buscador {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+//* Título principal */
+.titulo-principal {
+    margin: 0;
+    color: var(--color-claro);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
 /* Logo */
 .logopokewiki {
-    height: 90px;
+    height: 120px;
     width: auto;
 }
 
 /* ===== BUSCADOR CENTRADO ===== */
 .buscador {
-    flex: 1;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .buscador input {
@@ -124,61 +143,34 @@ body {
 /* ================================
    SECCIONES
 ================================= */
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background: ;
-    display: block;
+main {
+    padding: 10px 20px;
+    background-color: var(--color-fondo);
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    box-sizing: border-box;
+
+
 }
 
 .introduccion-PokeWiki {
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 80%;
-    padding: 20px;
-    border: 3px solid var(--color-claro);
-    box-sizing: border-box;
-}
-
-.index_secciones {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 80%;
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-.index_section_uno,
-.index_section_dos {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    color: var(--color-naranja);
+    padding: 8px 0px;
+    text-align: center;
     align-items: center;
-    padding: 20px;
-    border: 3px solid var(--color-claro);
-    box-sizing: border-box;
+    margin: auto;
 }
 
-.img_curiosidades_pokemon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
+.introduccion-PokeWiki h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-.imagen_pokemon_famosos {
-    align-items: center;
-    justify-content: center;
-    width: 60%;
-    height: 32%;
 }
-
 
 /* ================================
    SERVICIOS
