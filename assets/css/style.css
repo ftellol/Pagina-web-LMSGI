@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&display=swap');
 
 /* ================================
         ESTILOS GLOBALES
@@ -14,6 +15,7 @@
 
     --fuente-principal: "Science Gothic", sans-serif;
     --fuente-secundaria: "Nunito Sans", sans-serif;
+    --fuente-china: "Chokokutai", sans-serif;
 }
 
 body {
@@ -24,16 +26,18 @@ body {
         CABECERA
 ================================= */
 .cabecera {
-    padding: 6px 37px;
+    padding: 12px 20px;
     background-image: url("../images/header6.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
     position: relative;
     box-sizing: border-box;
+    height: auto;
 }
 
 /* Necesario para bajarle la intensidad a la imagen y lo posicionamos en la posición 0 */
@@ -51,58 +55,72 @@ body {
     z-index: 1;
 }
 
-.contenedor-buscador {
-    flex: 1;
+.cabecera::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-rojo);
+    z-index: 2;
+}
+
+/* Título principal */
+.titulo-principal {
+    font-family: var(--fuente-china);
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: var(--color-rojo);
+}
+
+.cabecera_titulo_buscador {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    flex: 1;
 }
-
-//* Título principal */
-.titulo-principal {
-    margin: 0;
-    color: var(--color-claro);
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
 
 /* Logo */
 .logopokewiki {
-    height: 120px;
+    height: 100%;
+    max-height: 100px;
     width: auto;
+    object-fit: contain;
+    flex: 0 0 auto;
 }
 
-/* ===== BUSCADOR CENTRADO ===== */
+/* Buscador */
 .buscador {
+    flex: 1;
     display: flex;
     justify-content: center;
+    text-align: center;
     width: 100%;
+    order: 2;
 }
 
 .buscador input {
     width: 60%;
-    max-width: 500px;
+    max-width: 100%;
     padding: 8px 12px;
     border-radius: 20px;
     border: none;
     font-size: 1.1rem;
 }
 
-/* ===== ICONO MENÚ ===== */
+/* Icono menú */
 .icono-menu {
     font-size: 1.3rem;
     cursor: pointer;
-    color: var(--color-naranja);;
+    color: var(--color-naranja);
+    flex: 0 0 auto;
 }
 
-.btn-menu {
-    display: none;
-}
-
-/* ===== MENÚ DESPLEGABLE ===== */
+/* Menú desplegable */
 .menu-desplegable {
     position: absolute;
     top: 100%;
@@ -132,8 +150,7 @@ body {
     background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+    background-clip: text; }
 
 .menu-desplegable ul li a:hover {
     background: linear-gradient(to bottom, var(--color-rojo), var(--color-naranja));
@@ -141,8 +158,34 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.btn-menu {
+    display: none;
+}
+
 .btn-menu:checked ~ .menu-desplegable {
     display: block;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .cabecera_titulo_buscador{
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .cabecera {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .titulo-principal {
+        font-size: 1.8rem;
+    }
+
+    .buscador input {
+        width: 80%;
+        max-width: 250px;
+    }
 }
 
 /* ================================
@@ -290,6 +333,7 @@ main {
     padding-left: 4px;
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
     .index_section_uno,
     .index_section_dos {
@@ -299,6 +343,20 @@ main {
     .contenedor_secciones_index {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Stacking for mobile */
+    .logopokewiki {
+        order: 0;
+    }
+    .titulo-principal {
+        order: 1;
+    }
+    .buscador {
+        order: 2;
+    }
+    .icono-menu {
+        order: 3;
     }
 }
 
