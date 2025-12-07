@@ -2,26 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sobre nosotros | PokeWiki</title>
+    <title>PokeWiki</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header class="cabecera">
         <img src="assets/images/PokeWiki_Charmander.png" alt="Logo de PokeWiki" class="logopokewiki">
-        <nav>
-            <h1 class="titulo-menu">Tabla de acceso rápido</h1>
-            <ul class="menu">
+        <section class="cabecera_titulo_buscador">
+            <h1 class="titulo-principal">PokeWiki</h1>
+            <form class="buscador">
+                <input type="text" placeholder="Buscar en PokeWiki...">
+            </form>
+        </section>
+
+        <input type="checkbox" id="btn-menu" class="btn-menu">
+        <label for="btn-menu" class="icono-menu">☰ Menú ▼</label>
+
+        <nav class="menu-desplegable">
+            <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./servicios.html">Tienda</a></li>
                 <li><a href="./about.html">Sobre nosotros</a></li>
                 <li><a href="./blog.html">Blog y Noticias</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href=./regiones.html >Regiones</a></li>
+                <li><a href="./regiones.html">Regiones</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="introduccion-about">
             <h2>Sobre PokeWiki</h2>
             <figure>
                 <img src="assets/images/pokemon_progreso.jpeg" alt="Juegos de Pokemon">
@@ -30,18 +40,26 @@
             <p>PokéWiki es un proyecto creado con pasión por el mundo Pokémon. Su objetivo es reunir, organizar y compartir toda la información del universo Pokémon: desde las regiones y sus entrenadores hasta los Pokémon legendarios que marcaron generaciones. La misión del sitio es ofrecer una enciclopedia digital clara, completa y atractiva, para que tanto los nuevos fans como los veteranos puedan explorar fácilmente todo lo relacionado con Pokémon.</p>
         </section>
 
-        <section>
+        <section class="quienes_somos_about">
             <h2>¿Quiénes Somos?</h2>
             <p>PokeWiki es un proyecto educativo organizado y creado por fans de Pokémon, desarrollado por Fabio. Inspirado por la nostalgia de los primeros juegos y la evolución constante de la franquicia, decidimos crear un espacio digital que reúna lo mejor de Pokémon en un formato moderno, accesible y visualmente atractivo.</p>
-            <h3>El equipo está conformado por:</h3>
-            <p>Maria(Fan de Pokémon desde pequeña), Paco(Programador web), Carolina(Diseño Web) y Peter(Mantiene al dia la información)</p>
-            <figure>
+        </section>
+
+        <section class="equipo-about">
+            <h2>El equipo está conformado por:</h2>
+            <figure class="equipo-imagen">
                 <img src="assets/images/Equipo.jpg" alt="Foto del equipo de trabajo">
                 <figcaption>Equipo detrás de PokeWiki</figcaption>
             </figure>
+            <ul class="equipo-lista">
+                <li><strong>Maria:</strong> Fan de Pokémon desde pequeña</li>
+                <li><strong>Paco:</strong> Programador web</li>
+                <li><strong>Carolina:</strong> Diseñador Web</li>
+                <li><strong>Peter:</strong> Mantiene al día la información</li>
+            </ul>
         </section>
 
-        <section>
+        <section class="valores-about">
             <h2>Nuestros valores</h2>
             <ul>
                 <li>Pasión por Pokémon: amamos este universo y queremos compartirlo con la comunidad.</li>

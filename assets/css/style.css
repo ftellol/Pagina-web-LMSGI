@@ -191,9 +191,9 @@ body {
 /* ================================
    SECCIONES
 ================================= */
-/* main principal general */
+/* ===== MAIN =====  */
 main {
-    padding: 10px 20px;
+    padding: 10px 0;
     background-color: var(--color-fondo);
     flex-direction: column;
     align-items: center;
@@ -204,7 +204,7 @@ main {
 
 /* ===== INDEX =====  */
 .introduccion-PokeWiki {
-    width: 80%;
+    width: 65%;
     color: var(--color-naranja);
     padding: 8px;
     text-align: center;
@@ -239,7 +239,7 @@ main {
 
 .tipos-pokemon h2 {
     font-family: var(--fuente-principal);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
     text-align: center;
     color: var(--color-azul);
@@ -267,7 +267,7 @@ main {
 
 .index_section_uno,
 .index_section_dos {
-    width: 35%;
+    width: 32%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -358,6 +358,188 @@ main {
     .icono-menu {
         order: 3;
     }
+}
+
+/* ===== ABOUT =====  */
+.introduccion-about {
+    width: 65%;
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    color: var(--color-naranja);
+}
+
+.introduccion-about h2 {
+    font-family: var(--fuente-principal);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--color-azul);
+}
+
+.introduccion-about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-family: var(--fuente-secundaria);
+}
+
+.introduccion-about img {
+    width:800px;
+    max-width: 100%;
+    height: auto;
+}
+
+.introduccion-about figcaption {
+    font-size: 0.9rem;
+    color: var(--color-rojo);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-family: var(--fuente-principal);
+}
+
+.quienes_somos_about {
+    width: 100%;
+    background-color: var(--color-claro);
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quienes_somos_about h2 {
+    width: 65%;
+    font-family: var(--fuente-principal);
+    margin-top: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--color-rojo);
+}
+.quienes_somos_about p {
+    width: 65%;
+    margin: auto;
+    font-family: var(--fuente-secundaria);
+    color: var(--color-azul);
+}
+
+.equipo-about {
+    width: 65%;
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    color: var(--color-naranja);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.equipo-about h2 {
+    font-family: var(--fuente-principal);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--color-azul);
+}
+
+.equipo-about p {
+    margin: auto;
+    font-family: var(--fuente-secundaria);
+    color: var(--color-naranja);
+}
+
+.equipo-imagen img {
+    width:100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 70%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.equipo-about figcaption {
+    font-size: 0.9rem;
+    color: var(--color-rojo);
+    margin-bottom: 0;
+    font-style: italic;
+    font-family: var(--fuente-principal);
+}
+
+.equipo-lista li:before {
+    content: "✨ ";
+    margin-right: 10px;
+    color: var(--color-rojo);
+}
+
+.equipo-lista {
+    font-family: var(--fuente-secundaria);
+    color: var(--color-azul);
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.equipo-lista li {
+    display: flex;
+    align-items: center;
+}
+
+.equipo-lista li strong {
+    color: var(--color-rojo);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.valores-about {
+    width: 65%;
+    margin: auto;
+    padding: 20px 0;
+    color: var(--color-azul);
+    font-family: var(--fuente-secundaria);
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
+}
+
+.valores-about h2 {
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    color: var(--color-rojo);
+    text-align: center;
+    margin: 0;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.valores-about ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.valores-about li:before {
+    content: "✔️ ";
+    margin-right: 8px;
+    color: var(--color-naranja);
+}
+
+.valores-about li {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
 }
 
 /* ================================
