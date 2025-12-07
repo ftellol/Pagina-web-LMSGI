@@ -12,6 +12,7 @@
     --color-rojo: #F24C27;
     --color-claro: #FFDF91;
     --color-fondo: #FCF7F1;
+    --color-azul-oscuro: #11232F;
 
     --fuente-principal: "Science Gothic", sans-serif;
     --fuente-secundaria: "Nunito Sans", sans-serif;
@@ -630,29 +631,24 @@ section .wrapper {
    FOOTER
 ================================= */
 .pie {
-    background-color: #11232F;
-    padding: 6px 30px;
+    background-color: var(--color-azul-oscuro);
+    padding: 3px 20px;
     color: var(--color-claro);
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contenedor-pie {
-    display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
+    gap: 10px;
 }
 
 /* Títulos */
 .pie h3 {
     font-size: 1.3rem;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
 }
 
 /* Quitar listas */
@@ -660,6 +656,7 @@ section .wrapper {
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Enlaces del footer */
@@ -674,32 +671,35 @@ section .wrapper {
     color: var(--color-naranja);
 }
 
-/* Bloques organizados uno al lado del otro (si hay espacio) */
+
 .paginas-sociales,
 .contacto {
-    max-width: 300px;
+    flex: 0 0 250px;
+    max-width: 400px;
+    width: 45%;
+    margin: 0 200px;
+    font-family: var(--fuente-secundaria);
 }
 
-/* Organización por orden */
 .pie p {
+    width: 100%;
+    text-align: center;
     margin: 0;
-    opacity: 0.9;
-    text-align: center;
+    font-size: 0.9rem;
+    font-family: var(--fuente-principal);
 }
 
-.creditos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    order: 2;
-}
+/* Responsividad */
+@media (max-width: 768px) {
+    .pie {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 
-.paginas-sociales {
-    order: 1;
+    .paginas-sociales,
+    .contacto {
+        width: 90%;
+        max-width: none;
+    }
 }
-
-.contacto {
-    order: 3;
-}
-
