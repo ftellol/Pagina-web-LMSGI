@@ -113,6 +113,20 @@ body {
     font-size: 1.1rem;
 }
 
+.buscador button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 8px;
+}
+
+.buscador button:hover {
+    background-color: var(--color-claro);
+}
+
 /* Icono menú */
 .icono-menu {
     font-size: 1.3rem;
@@ -264,6 +278,22 @@ main {
     font-size: 1rem;
     color: var(--color-azul);
     margin: 0;
+}
+
+/*
+    Necesario para que la sección sea permitida por W3C Validator
+    Esto hace que el titulo se elimine visualmente pero siga siendo accesible
+*/
+.titulo_contenedor_index {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .index_section_uno,
@@ -638,17 +668,19 @@ section .wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
 /* Títulos */
-.pie h3 {
-    font-size: 1.3rem;
+.pie h3,
+.pie .contacto-titulo {
+    font-size: 1.2rem;
     margin-bottom: 4px;
-    background: linear-gradient(to bottom, var(--color-amarillo), var(--color-naranja));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--color-naranja);
     text-align: center;
+    font-family: var(--fuente-principal);
+    font-weight: 700;
 }
 
 /* Quitar listas */
@@ -674,8 +706,8 @@ section .wrapper {
 
 .paginas-sociales,
 .contacto {
-    flex: 0 0 250px;
-    max-width: 400px;
+    flex: 1 1 240px;
+    max-width: 360px;
     width: 45%;
     margin: 0 200px;
     font-family: var(--fuente-secundaria);
