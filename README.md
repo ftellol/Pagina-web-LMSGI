@@ -65,4 +65,43 @@ Dentro del (`<main>`), decidi dividir el contenido en varias secciones (`<sectio
 
 El uso de (`<figure>`) y (`<figcaption>`) se consideró esencial para mantener la relación semántica entre las imágenes y sus descripciones, garantizando una presentación visualmente ordenada, y la jerarquia de encabezados (`<h1, h2, h3>`) sigue un orden lógico ayudando a la jerarquia de la información.
 
+## Decisiones de diseño visual
+- Se utilizan variables CSS (:root) para definir los colores principales, secundarios y de fondo, garantizando consistencia y facilidad de mantenimiento.
+- Menú hamburguesa para mejorar la navegación en dispositivos móviles.
+- Diseño responsivo mediante flexbox y media queries, asegurando que la página se vea correctamente en móviles y escritorio.
+- Líneas decorativas sobre algunos títulos para separar visualmente secciones.
+- Sombras y bordes redondeados en tarjetas y botones para mejorar la estética y percepción de profundidad.
+- Modo oscuro activable sin JavaScript mediante un checkbox (#darkmode-toggle) y el selector :has(), permitiendo alternar entre modos de forma sencilla y accesible.
 
+## Paleta de colores
+La paleta de colores se basa en el logo de la página, con colores vivos y alegres, acorde con la temática Pokémon.
+
+### Modo claro
+- Fondo principal: un blanco ligeramente cálido.
+- Azul oscuro: para textos principales y fondo del footer (buen contraste con el fondo).
+- Naranja: para párrafos y detalles secundarios.
+- Azul claro: para títulos y algunos párrafos.
+- Rojo: para acentos y detalles importantes.
+- Color claro: para fondos de secciones y elementos destacados.
+
+### Modo oscuro
+- Tonos más fríos y desaturados para reducir fatiga visual y mantener buen contraste.
+
+## Tipografías
+- **Science Gothic:** fuente principal, usada en encabezados y títulos.
+- **Nunito Sans:** fuente secundaria, muy legible para párrafos y textos largos.
+- **Chokokutai:** solo para elementos decorativos, dando un toque temático.
+
+## Validación W3C Validator
+He validado todas las páginas de mi proyecto utilizando el W3C Validator para asegurarme de que cumplen con los estándares web. A continuación, se presentan los enlaces a los resultados de la validación para cada página:
+
+### 1. HTML
+- [Validar Index](https://validator.w3.org/nu/?doc=https%3A%2F%2Fftellol.github.io%2FPagina-web-LMSGI%2Findex.html)
+- [Validar Servicios](https://validator.w3.org/nu/?doc=https%3A%2F%2Fftellol.github.io%2FPagina-web-LMSGI%2Fservicios.html)
+- [Validar About](https://validator.w3.org/nu/?doc=https%3A%2F%2Fftellol.github.io%2FPagina-web-LMSGI%2Fabout.html)
+- [Validar Blog](https://validator.w3.org/nu/?doc=https%3A%2F%2Fftellol.github.io%2FPagina-web-LMSGI%2Fblog.html)
+- [Validar Contacto](https://validator.w3.org/nu/?doc=https%3A%2F%2Fftellol.github.io%2FPagina-web-LMSGI%2Fcontacto.html)
+- [Validar Regiones](https://validator.w3.org/nu/?doc=https%3A%2F%2Fftellol.github.io%2FPagina-web-LMSGI%2Fregiones.html)
+
+### 2. CSS
+- [Validar CSS](https://jigsaw.w3.org/css-validator/validator?uri=https://ftellol.github.io/Pagina-web-LMSGI/assets/css/style.css)
