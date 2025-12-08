@@ -1,11 +1,15 @@
+/* ================================
+   IMPORTACIÓN DE FUENTES
+   ================================ */
 @import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chokokutai&display=swap');
 
 /* ================================
-        ESTILOS GLOBALES
-================================= */
+   VARIABLES CSS GLOBALES
+   ================================ */
 :root {
+    /* Paleta de colores */
     --color-azul: #316388;
     --color-naranja: #F26E22;
     --color-amarillo: #F29A2E;
@@ -14,18 +18,21 @@
     --color-fondo: #FCF7F1;
     --color-azul-oscuro: #11232F;
 
+    /* Tipografías */
     --fuente-principal: "Science Gothic", sans-serif;
     --fuente-secundaria: "Nunito Sans", sans-serif;
     --fuente-china: "Chokokutai", sans-serif;
 }
 
+/* Reset */
 body {
     margin: 0;
 }
 
 /* ================================
-        CABECERA
-================================= */
+   CABECERA (HEADER)
+   ================================ */
+/* Contenedor de la cabecera */
 .cabecera {
     padding: 12px 20px;
     background-image: url("../images/header6.jpg");
@@ -41,7 +48,7 @@ body {
     height: auto;
 }
 
-/* Necesario para bajarle la intensidad a la imagen y lo posicionamos en la posición 0 */
+/* Overlay para oscurecer imagen */
 .cabecera:before {
     content: "";
     position: absolute;
@@ -50,12 +57,13 @@ body {
     z-index: 0;
 }
 
-/* Para posicionar el texto sobre la imagen en la posición 1 */
+/* Elementos sobre el overlay */
 .cabecera > * {
     position: relative;
     z-index: 1;
 }
 
+/* Línea decorativa inferior */
 .cabecera::after {
     content: "";
     position: absolute;
@@ -77,6 +85,7 @@ body {
     color: var(--color-rojo);
 }
 
+/* Contenedor del título y el buscador */
 .cabecera_titulo_buscador {
     display: flex;
     flex-direction: column;
@@ -94,7 +103,7 @@ body {
     flex: 0 0 auto;
 }
 
-/* Buscador */
+/* Contenedor del buscador */
 .buscador {
     flex: 1;
     display: flex;
@@ -113,6 +122,7 @@ body {
     font-size: 1.1rem;
 }
 
+/* Botón del buscador */
 .buscador button {
     width: 40px;
     height: 40px;
@@ -127,7 +137,7 @@ body {
     background-color: var(--color-claro);
 }
 
-/* Icono menú */
+/* Icono del menú hamburguesa */
 .icono-menu {
     font-size: 1.3rem;
     cursor: pointer;
@@ -135,7 +145,7 @@ body {
     flex: 0 0 auto;
 }
 
-/* Menú desplegable */
+/* Menú de navegación desplegable */
 .menu-desplegable {
     position: absolute;
     top: 100%;
@@ -147,6 +157,7 @@ body {
     display: none;
 }
 
+/* Lista de enlaces del menú */
 .menu-desplegable ul {
     list-style: none;
     padding: 0;
@@ -156,6 +167,7 @@ body {
     gap: 12px;
 }
 
+/* Enlaces del menú */
 .menu-desplegable ul li a {
     font-size: 1.3rem;
     font-weight: bold;
@@ -173,10 +185,12 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+/* Checkbox oculto que controla el menú */
 .btn-menu {
     display: none;
 }
 
+/* Muestra el menú cuando el checkbox está activo */
 .btn-menu:checked ~ .menu-desplegable {
     display: block;
 }
@@ -217,7 +231,10 @@ main {
     display: flex;
 }
 
-/* ===== INDEX =====  */
+/* ================================
+   INDEX
+================================= */
+/* Introducción de la página principal */
 .introduccion-PokeWiki {
     width: 65%;
     color: var(--color-naranja);
@@ -227,6 +244,7 @@ main {
     margin: auto;
 }
 
+/* Título de la introducción */
 .introduccion-PokeWiki h2 {
     font-family: var(--fuente-principal);
     font-size: 2rem;
@@ -234,13 +252,14 @@ main {
     color: var(--color-azul);
 }
 
+/* Párrafo de la introducción */
 .introduccion-PokeWiki p {
     font-size: 1.1rem;
     line-height: 1.6;
     font-family: var(--fuente-secundaria);
 }
 
-/* Tipos */
+/* Sección de tipos de Pokémon */
 .tipos-pokemon {
     width: 100%;
     background-color: var(--color-claro);
@@ -253,6 +272,7 @@ main {
     gap: 40px;
 }
 
+/* Título de la sección de tipos */
 .tipos-pokemon h2 {
     font-family: var(--fuente-principal);
     font-size: 1.6rem;
@@ -261,6 +281,7 @@ main {
     color: var(--color-azul);
 }
 
+/* Contenedor de cada tipo de Pokémon */
 .figura-tipo {
     display: flex;
     flex-direction: column;
@@ -268,12 +289,14 @@ main {
     gap: 8px;
 }
 
+/* Icono del tipo de Pokémon */
 .figura-tipo img {
     width: 80px;
     max-width: 100%;
     height: auto;
 }
 
+/* Nombre del tipo de Pokémon */
 .figura-tipo figcaption {
     font-family: var(--fuente-secundaria);
     font-size: 1rem;
@@ -281,10 +304,7 @@ main {
     margin: 0;
 }
 
-/*
-    Necesario para que la sección sea permitida por W3C Validator
-    Esto hace que el titulo se elimine visualmente pero siga siendo accesible
-*/
+/* Título oculto para accesibilidad */
 .titulo_contenedor_index {
     position: absolute;
     width: 1px;
@@ -297,8 +317,8 @@ main {
     border: 0;
 }
 
-.index_section_uno,
-.index_section_dos {
+/* Bloques de contenido del index */
+.index_section_uno, .index_section_dos {
     width: 32%;
     display: flex;
     flex-direction: column;
@@ -310,8 +330,8 @@ main {
     overflow: hidden;
 }
 
-.index_section_uno h2,
-.index_section_dos h2 {
+/* Títulos de los bloques de contenido */
+.index_section_uno h2, .index_section_dos h2 {
     font-family: var(--fuente-principal);
     width: 100%;
     padding: 10px;
@@ -322,8 +342,8 @@ main {
     text-align: center;
 }
 
-.index_section_uno img,
-.index_section_dos img {
+/* Imágenes de los bloques de contenido */
+.index_section_uno img, .index_section_dos img {
     width: 100%;
     max-height: 250px;
     display: block;
@@ -332,14 +352,15 @@ main {
     box-sizing: border-box;
 }
 
-.index_section_uno p,
-.index_section_dos p {
+/* Párrafos de los bloques de contenido */
+.index_section_uno p, .index_section_dos p {
     font-size: 1rem;
     text-align: center;
     width: 90%;
     font-family: var(--fuente-secundaria);
 }
 
+/* Contenedor de las secciones principales */
 .contenedor_secciones_index {
     display: flex;
     justify-content: center;
@@ -350,34 +371,33 @@ main {
     box-sizing: border-box;
 }
 
-.index_section_uno li,
-.index_section_dos li {
+/* Elementos de lista */
+.index_section_uno li, .index_section_dos li {
     padding: 0 15px;
     font-family: var(--fuente-secundaria);
 }
 
+/* Espaciado de lista ordenada */
 .index_section_uno ol li{
     margin-bottom: 15px;
 }
 
+/* Icono de lista no ordenada */
 .index_section_dos ul li {
-    list-style-type: "✨  ";
+    list-style-type: "✨ ";
     padding-left: 4px;
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
-    .index_section_uno,
-    .index_section_dos {
+    .index_section_uno, .index_section_dos {
         width: 90%;
     }
-
     .contenedor_secciones_index {
         flex-direction: column;
         align-items: center;
     }
-
-    /* Para moviles */
+    /* Para móviles */
     .logopokewiki {
         order: 0;
     }
@@ -392,7 +412,9 @@ main {
     }
 }
 
-/* ===== ABOUT =====  */
+/* ================================
+   ABOUT
+================================= */
 .introduccion-about {
     width: 65%;
     padding: 8px;
@@ -574,7 +596,9 @@ main {
     line-height: 1.5;
 }
 
-/* ===== SERVICIOS =====  */
+/* ================================
+   SERVICIOS (TIENDA)
+================================= */
 .servicios-introduccion {
     width: 80%;
     color: var(--color-naranja);
@@ -819,7 +843,9 @@ main {
     }
 }
 
-/* ===== CONTACTO =====  */
+/* ================================
+   CONTACTO
+================================= */
 .contacto-introduccion {
     width: 65%;
     margin: 10px auto;
@@ -1020,7 +1046,9 @@ textarea {
     }
 }
 
-/* ===== REGIONES =====  */
+/* ================================
+   REGIONES
+================================= */
 .regiones-introduccion,
 .regiones-principales,
 .regiones-secundarias {
@@ -1152,7 +1180,9 @@ textarea {
     }
 }
 
-/* ===== BLOG =====  */
+/* ================================
+   BLOG
+================================= */
 .blog-noticias img,
 .blog-eventos img {
     width: 100%;
