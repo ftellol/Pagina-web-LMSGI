@@ -1020,6 +1020,138 @@ textarea {
     }
 }
 
+/* ===== REGIONES =====  */
+.regiones-introduccion,
+.regiones-principales,
+.regiones-secundarias {
+    width: 65%;
+    color: var(--color-naranja);
+    padding: 8px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.regiones-introduccion h2,
+.regiones-principales h2,
+.regiones-secundarias h2 {
+    font-family: var(--fuente-principal);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--color-azul);
+}
+
+.regiones-principales h2,
+.regiones-secundarias h2 {
+    background-color: var(--color-claro);
+    padding: 10px;
+    border-radius: 0;
+    width: 100%;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.regiones-principales h3,
+.regiones-secundarias h3 {
+    font-family: var(--fuente-principal);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--color-azul);
+    padding-top: 20px;
+    position: relative;
+}
+
+.regiones-principales h4,
+.regiones-secundarias h4 {
+    font-family: var(--fuente-china );
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--color-rojo);
+}
+
+.regiones-principales img,
+.regiones-secundarias img {
+    width: 100%;
+    max-height: 700px;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.region-juegos {
+    font-size: 1rem;
+    color: var(--color-azul);
+    margin-bottom: 10px;
+    font-family: var(--fuente-secundaria);
+}
+
+.regiones-principales figcaption,
+.regiones-secundarias figcaption {
+    font-size: 0.9rem;
+    color: var(--color-rojo);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-family: var(--fuente-principal);
+}
+.regiones-introduccion p,
+.regiones-principales p,
+.regiones-secundarias p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: var(--fuente-secundaria);
+    margin-bottom: 10px;
+}
+
+.regiones-principales h3::before,
+.regiones-secundarias h3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 4px;
+    background-color: var(--color-rojo);
+    border-radius: 2px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .regiones-introduccion,
+    .regiones-principales,
+    .regiones-secundarias {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .regiones-principales img,
+    .regiones-secundarias img {
+        max-width: 100%;
+        max-height: 400px;
+        height: auto;
+    }
+
+    .regiones-principales h2,
+    .regiones-secundarias h2 {
+        font-size: 1.6rem;
+    }
+
+    .regiones-principales h3,
+    .regiones-secundarias h3 {
+        font-size: 1.3rem;
+    }
+
+    .regiones-principales h4,
+    .regiones-secundarias h4 {
+        font-size: 0.9rem;
+    }
+}
+
 /* ================================
    FOOTER
 ================================= */

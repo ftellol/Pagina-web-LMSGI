@@ -2,140 +2,149 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Regiones de Pokémon | PokeWiki</title>
+    <title>PokeWiki</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header class="cabecera">
         <img src="assets/images/PokeWiki_Charmander.png" alt="Logo de PokeWiki" class="logopokewiki">
-        <nav>
-            <h1 class="titulo-menu">Tabla de acceso rápido</h1>
-            <ul class="menu">
+        <section class="cabecera_titulo_buscador">
+            <h1 class="titulo-principal">PokeWiki</h1>
+            <form class="buscador">
+                <input type="text" placeholder="Buscar en PokeWiki...">
+                <button type="submit">🔍</button>
+            </form>
+        </section>
+
+        <input type="checkbox" id="btn-menu" class="btn-menu">
+        <label for="btn-menu" class="icono-menu">☰ Menú ▼</label>
+
+        <nav class="menu-desplegable">
+            <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./servicios.html">Tienda</a></li>
                 <li><a href="./about.html">Sobre nosotros</a></li>
                 <li><a href="./blog.html">Blog y Noticias</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href=./regiones.html >Regiones</a></li>
+                <li><a href="./regiones.html">Regiones</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="regiones-introduccion">
             <h2>Regiones del mundo Pokémon</h2>
-            <p>A lo largo del vasto universo Pokémon, las regiones representan los diferentes mundos que los entrenadores han explorado generación tras generación. <br>
-            Cada una posee su propia geografía, cultura, ecosistema y especies únicas, dando forma a la diversidad y riqueza del mundo Pokémon.</p>
-            <p>El mundo Pokémon está dividido en diversas regiones, cada una inspirada en lugares reales y con su propio encanto, especies y tradiciones.<br>
-            Conoce las tierras que han dado vida a las aventuras de los entrenadores desde Kanto hasta Paldea.</p>
+            <p>A lo largo del vasto universo Pokémon, las regiones representan los diferentes mundos que los entrenadores han explorado generación tras generación. Cada una posee su propia geografía, cultura, ecosistema y especies únicas, dando forma a la diversidad y riqueza del mundo Pokémon.</p>
+            <p>El mundo Pokémon está dividido en diversas regiones, cada una inspirada en lugares reales y con su propio encanto, especies y tradiciones. Conoce las tierras que han dado vida a las aventuras de los entrenadores desde Kanto hasta Paldea.</p>
         </section>
 
-        <section>
+        <section class="regiones-principales">
             <h2>Regiones principales</h2>
             <p>Existen 9 regiones principales en los videojuegos de Pokémon</p>
-            <article>
+            <article class="region-principal">
                 <h3>Kanto</h3>
                 <figure>
                     <img src="assets/images/Kanto.png" alt="Mapa de la región Kanto">
                     <figcaption>Región de Kanto</figcaption>
                 </figure>
                 <h4>Generación: I</h4>
-                <p>Juegos: Rojo, Azul, Verde, Amarillo</p>
+                <p class="region-juegos">Juegos: Rojo, Azul, Verde, Amarillo</p>
                 <p>Kanto es la región que dio inicio a la franquicia. Inspirada en la prefectura de Kantō en Japón, combina ciudades pequeñas con rutas naturales y montañas. Es famosa por ser donde los entrenadores inician su aventura y capturan a los Pokémon originales como Pikachu, Charmander, Bulbasaur y Squirtle. Además, Kanto introdujo los 151 Pokémon originales y sentó las bases de la mecánica de gimnasios, batallas y evolución.</p>
                 <p>Pokémon destacados: Pikachu, Charmander, Bulbasaur, Squirtle, Mewtwo.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Johto</h3>
                 <figure>
                     <img src="assets/images/Johto.png" alt="Mapa de la región de Johto">
                     <figcaption>Región de Johto</figcaption>
                 </figure>
                 <h4>Generación: II</h4>
-                <p>Juegos: Oro, Plata, Cristal</p>
+                <p class="region-juegos">Juegos: Oro, Plata, Cristal</p>
                 <p>Inspirada en Hawaii, Alola es tropical, soleada y está compuesta por varias islas. Introdujo las formas regionales de Alola, que son variaciones de Pokémon de Kanto adaptadas al clima y cultura local. La región se centra en la vida relajada y la exploración de islas, reemplazando los gimnasios tradicionales por el “Tour Insular”, donde los entrenadores enfrentan retos únicos y guardianes legendarios.</p>
                 <p>Pokémon destacados: Cyndaquil, Totodile, Chikorita, Lugia, Ho-Oh.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Hoenn</h3>
                 <figure>
                     <img src="assets/images/Hoenn.jpg" alt="Mapa de la región de Hoenn">
                     <figcaption>Región de Hoenn</figcaption>
                 </figure>
                 <h4>Generación: III</h4>
-                <p>Juegos: Rubí, Zafiro, Esmeralda</p>
+                <p class="region-juegos">Juegos: Rubí, Zafiro, Esmeralda</p>
                 <p>Inspirada en Kyushu, Hoenn destaca por su diversidad natural: desde desiertos y volcanes hasta extensos océanos y selvas tropicales. Introdujo mecánicas como habilidades y batallas dobles. La exploración de Hoenn tiene un fuerte componente acuático, con rutas navegables y Pokémon exclusivos de agua. La región también es famosa por sus líderes de gimnasio y la historia centrada en el clima y los legendarios Groudon y Kyogre</p>
                 <p>Pokémon destacados: Torchic, Mudkip, Treecko, Groudon, Kyogre.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Sinnoh</h3>
                 <figure>
                     <img src="assets/images/Sinnoh.png" alt="Mapa de la región de Sinnoh">
                     <figcaption>Región de Sinnoh</figcaption>
                 </figure>
                 <h4>Generación: IV</h4>
-                <p>Juegos: Diamante, Perla, Platino</p>
+                <p class="region-juegos">Juegos: Diamante, Perla, Platino</p>
                 <p>Basada en Hokkaido, Sinnoh combina montañas nevadas, lagos cristalinos y ciudades modernas con toques tradicionales. Introdujo nuevas formas de evolución, como la amistad y la evolución por piedra, y presentó a los legendarios que representan la creación del universo Pokémon: Dialga, Palkia y Giratina. La historia de Sinnoh es más profunda, explorando temas de origen y balance del mundo Pokémon.</p>
                 <p>Pokémon destacados: Turtwig, Chimchar, Piplup, Dialga, Palkia, Giratina.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Unova o Teselia</h3>
                 <figure>
                     <img src="assets/images/Teselia.webp" alt="Mapa de la región de Unova">
                     <figcaption>Región de Unova o Teselia</figcaption>
                 </figure>
                 <h4>Generación: V</h4>
-                <p>Juegos: Negro, Blanco, Negro 2, Blanco 2</p>
+                <p class="region-juegos">Juegos: Negro, Blanco, Negro 2, Blanco 2</p>
                 <p>Inspirada en Nueva York, Unova es la primera región completamente nueva en la serie, con un diseño urbano y cosmopolita. Introdujo únicamente Pokémon nuevos en su primera generación, destacando por su diversidad de biomas: desde ciudades modernas hasta desiertos, bosques y zonas nevadas. La historia de Unova se centra en los ideales, la moralidad y los equipos villanos que buscan controlar a los Pokémon legendarios.</p>
                 <p>Pokémon destacados: Snivy, Tepig, Oshawott, Reshiram, Zekrom.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Kalos</h3>
                 <figure>
                     <img src="assets/images/Kalos.png" alt="Mapa de la región de Kalos">
                     <figcaption>Región de Kalos</figcaption>
                 </figure>
                 <h4>Generación: VI</h4>
-                <p>Juegos: X y Y</p>
+                <p class="region-juegos">Juegos: X y Y</p>
                 <p>Basada en Francia, Kalos se caracteriza por su elegancia, moda y arquitectura europea. Introdujo las Mega Evoluciones, un sistema que permite a ciertos Pokémon alcanzar un poder temporal superior en batalla. Kalos también destacó por la interacción con concursos y competencias de belleza Pokémon, además de ofrecer rutas panorámicas, ciudades con inspiración parisina y Pokémon que reflejan cultura y estilo europeo.</p>
                 <p>Pokémon destacados: Chespin, Fennekin, Froakie, Xerneas, Yveltal.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Alola</h3>
                 <figure>
                     <img src="assets/images/Alola.png" alt="Mapa de la región de Alola">
                     <figcaption>Región de Alola</figcaption>
                 </figure>
                 <h4>Generación: VII</h4>
-                <p>Juegos: Sol y Luna, Ultrasol y Ultraluna</p>
+                <p class="region-juegos">Juegos: Sol y Luna, Ultrasol y Ultraluna</p>
                 <p>Inspirada en Hawaii, Alola es tropical, soleada y está compuesta por varias islas. Introdujo las formas regionales de Alola, que son variaciones de Pokémon de Kanto adaptadas al clima y cultura local. La región se centra en la vida relajada y la exploración de islas, reemplazando los gimnasios tradicionales por el “Tour Insular”, donde los entrenadores enfrentan retos únicos y guardianes legendarios.</p>
                 <p>Pokémon destacados: Rowlet, Litten, Popplio, Solgaleo, Lunala.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Galar</h3>
                 <figure>
                     <img src="assets/images/Galar.png" alt="Mapa de la región de Galar">
                     <figcaption>Región de Galar</figcaption>
                 </figure>
                 <h4>Generación: VIII</h4>
-                <p>Juegos: Espada y Escudo</p>
+                <p class="region-juegos">Juegos: Espada y Escudo</p>
                 <p>Basada en Reino Unido, Galar combina zonas industriales, pueblos rurales y paisajes naturales. Introdujo las mecánicas de Dinamax y Gigamax, donde los Pokémon pueden crecer enormemente en tamaño y poder durante batallas. La región enfatiza la cultura deportiva, con estadios espectaculares, ligas Pokémon competitivas y un fuerte enfoque en entrenadores y torneos.</p>
                 <p>Pokémon destacados: Grookey, Scorbunny, Sobble, Zacian, Zamacenta.</p>
             </article>
-            <article>
+            <article class="region-principal">
                 <h3>Paldea</h3>
                 <figure>
                     <img src="assets/images/Paldea.jpg" alt="Mapa de la región de Paldea">
                     <figcaption>Región de Paldea</figcaption>
                 </figure>
                 <h4>Generación: IX</h4>
-                <p>Juegos: Escarlata y Púrpura</p>
+                <p class="region-juegos">Juegos: Escarlata y Púrpura</p>
                 <p>Inspirada en la Península Ibérica, Paldea es una región abierta y expansiva, pensada para la exploración libre. Introdujo la mecánica de Pokémon Teracristalizados, que transforma a los Pokémon temporalmente durante el combate. Paldea mezcla ciudades modernas con campos y paisajes variados, fomentando aventuras personalizadas, desafíos libres y descubrimiento constante de Pokémon nuevos y legendarios.</p>
                 <p>Pokémon destacados: Sprigatito, Fuecoco, Quaxly, Koraidon, Miraidon.</p>
             </article>
         </section>
 
-        <section>
+        <section class="regiones-secundarias">
             <h2>Regiones secundarias</h2>
-            <article>
+            <article class="region-secundaria">
                 <h3>Pokémon Ranger</h3>
                 <figure>
                     <img src="assets/images/pokemon_ranger.jpg" alt="Juego Pokemon Ranger">
@@ -143,7 +152,7 @@
                 </figure>
                 <p>En los juegos de la saga Pokémon Ranger, los jugadores exploran regiones únicas que no forman parte de las zonas tradicionales de la saga principal. Las regiones de Fiore y Almia destacan por sus paisajes variados, desde verdes praderas y bosques hasta áreas montañosas y cuerpos de agua, ofreciendo un ecosistema rico en Pokémon y entornos. Estas regiones se caracterizan por estar diseñadas específicamente para la interacción con los Pokémon en su hábitat natural, permitiendo descubrir criaturas que solo se encuentran allí y experimentar cómo se relacionan entre sí y con el entorno. La originalidad de Fiore y Almia reside en que son regiones construidas exclusivamente para estas aventuras spin-off, mostrando una visión del mundo Pokémon donde la exploración y el estudio del ecosistema tienen un papel central, y donde cada zona tiene su propio carácter, clima y especies endémicas.</p>
             </article>
-            <article>
+            <article class="region-secundaria">
                 <h3>Spin-offs</h3>
                 <figure>
                     <img src="assets/images/region_orre.jpg" alt="Mapa de la región de Orre">
@@ -151,7 +160,7 @@
                 </figure>
                 <p>Los spin-offs de Pokémon presentan regiones secundarias únicas que no aparecen en los juegos principales, ofreciendo entornos distintos y originales. Un ejemplo destacado es la región de Orre, protagonista de Pokémon Colosseum y Pokémon XD: Gale of Darkness, un área desértica y árida con ciudades oscuras, laboratorios y ruinas que contrastan con las regiones más verdes y tradicionales de la saga principal. En estas regiones, cada ciudad, pueblo o desierto tiene su propio estilo y carácter, y la geografía está diseñada para un entorno más narrativo y misterioso. Otro ejemplo es la Isla Pokémon de Pokémon Snap, un lugar totalmente natural dividido en playas, junglas, desiertos y lagos, donde cada bioma alberga Pokémon específicos que solo se pueden observar allí, mostrando la diversidad de ecosistemas que los spin-offs exploran más allá de los mapas de los juegos principales.</p>
             </article>
-            <article>
+            <article class="region-secundaria">
                 <h3>Regiones especiales</h3>
                 <figure>
                     <img src="assets/images/Ransei.png" alt="Mapa de la región de Ransei">
@@ -161,24 +170,27 @@
             </article>
         </section>
     </main>
-    <footer>
-        <section>
-            <h3>¡Síguenos en nuestras redes sociales!</h3>
+    <footer class="pie">
+        <section class="paginas-sociales">
+            <h3>¡Nuestras redes sociales!</h3>
             <ul>
                 <li><a href="https://www.facebook.com/Pokemon/?locale=es_ES">Facebook</a></li>
                 <li><a href="https://x.com/Pokemon">Twitter</a></li>
                 <li><a href="https://www.instagram.com/pokemon/">Instagram</a></li>
             </ul>
         </section>
-        <address>
+
+        <address class="contacto">
+            <p class="contacto-titulo">¡Contáctanos aquí!</p>
             <ul>
                 <li><a href="./contacto.html">Página de Contacto</a></li>
                 <li><a href="mailto:Pokewiki@gmail.com">pokewiki@gmail.com</a></li>
                 <li><a href="tel:+34672637827">Tel: +34 672 637 827</a></li>
             </ul>
         </address>
-        <p>&copy; PokeWiki. Todos los derechos reservados.</p>
-        <p>Diseñado y desarrollado por Fabio Tello - 1º DAW</p>
+
+        <p class="copyright">&copy; PokeWiki. Todos los derechos reservados.</p>
+        <p class="creditos">Diseñado y desarrollado por Fabio Tello - 1º DAW</p>
     </footer>
 </body>
 </html>
