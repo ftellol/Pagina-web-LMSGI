@@ -32,80 +32,89 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="servicios-introduccion">
             <h2>Servicios y Productos Pokémon</h2>
-            <img src="/assets/images/tienda_pokemon.jpg" alt="Logo Pokemon Store">
+            <img src="assets/images/tienda_pokemon.jpg" alt="Logo Pokemon Store">
             <p>En PokeWiki, nos apasiona ofrecer lo mejor del universo Pokémon a coleccionistas y entrenadores de todas partes. Nuestra tienda combina productos originales, tasados y certificados con un servicio de calidad pensado para los verdaderos fans.</p>
             <p>Aquí encontrarás una cuidada selección de cartas Pokémon auténticas, evaluadas profesionalmente y garantizadas por su estado y rareza, ideales para coleccionistas o jugadores competitivos. Además, contamos con una amplia gama de figuras oficiales, desde ediciones estándar hasta piezas de colección premium, todas con un nivel de detalle y acabado excepcionales.</p>
         </section>
 
-        <section>
+        <section class="servicios-figuras">
             <h2>Figuras oficiales</h2>
             <p>Contamos con figuras de diferentes tamaños y ediciones, desde las más pequeñas ideales para decorar tu escritorio, hasta modelos de colección premium con bases detalladas y posturas dinámicas que capturan la esencia de cada Pokémon.</p>
             <p>Nuestras figuras pasan por un control de autenticidad y calidad, garantizando que cada producto conserve su color, forma y durabilidad con el paso del tiempo. Además, ofrecemos envíos seguros con protección especial para que tus figuras lleguen en perfectas condiciones, listas para formar parte de tu colección o para regalar a otro fan del mundo Pokémon.</p>
-            <article>
+            <article class="figura-producto">
                 <h3>Figura de Pikachu 8 pulgadas</h3>
-                <img src="/assets/images/figura_pikachu.jpg" alt="Figura de Pikachu">
+                <figure>
+                    <img src="assets/images/figura_pikachu.jpg" alt="Figura de Pikachu">
+                    <figcaption>Figura de Pikachu original</figcaption>
+                </figure>
                 <p>Elige a Pikachu, el Pokémon Ratón. Esta figura especial de 8 pulgadas está hecha de vinilo de alta calidad y presenta detalles auténticos de la serie animada de Pokémon. Coloca a este popular tipo Eléctrico en tu escritorio o estante para que te haga compañía durante tus estudios de Pokémon. Añade más figuras de vinilo de Pokémon Select de 8 pulgadas a tu exhibición y forma un equipo de Pokémon bien entrenados. Producto oficial de Pokémon de Jazwares.</p>
                 <p>Precio = 20,99 €</p>
                 <form>
-                    <label for="cantidad4">Cantidad:</label>
-                    <input type="number" id="cantidad4" min="1" max="5" value="1">
+                    <label for="cantidad_figura_pikachu">Cantidad:</label>
+                    <input type="number" id="cantidad_figura_pikachu" name="cantidad_figura_pikachu" min="1" max="5" value="1">
                     <button type="submit">Comprar</button>
                 </form>
             </article>
-            <article>
+            <article class="figura-producto">
                 <h3>Figura Charizard articulada</h3>
-                <img src="/assets/images/figura_charizard.jpg" alt="Figura de Charizard">
-                <p>Haz ya tu pedido de figura de Charizard de Pokémon Select articulada de BIZAKYa puedes hacerte con figura de Charizard de Pokémon Select articulada. Dispone de unas dimensiones de 26 x 13 x 18 cm</p>
+                <figure>
+                    <img src="assets/images/figura_charizard.jpg" alt="Figura de Charizard">
+                    <figcaption>Figura de Charizard original</figcaption>
+                </figure>
+                <p>Haz ya tu pedido de figura de Charizard de Pokémon Select articulada de BIZAK. Ya puedes hacerte con figura de Charizard de Pokémon Select articulada. Dispone de unas dimensiones de 26 x 13 x 18 cm</p>
                 <p>Precio = 25,99 €</p>
                 <form>
-                    <label for="cantidad3">Cantidad:</label>
-                    <input type="number" id="cantidad3" min="1" max="5" value="1">
+                    <label for="cantidad_figura_charizard">Cantidad:</label>
+                    <input type="number" id="cantidad_figura_charizard" name="cantidad_figura_charizard" min="1" max="5" value="1">
                     <button type="submit">Comprar</button>
                 </form>
             </article>
         </section>
 
-        <section>
+        <section class="servicios-cartas">
             <h2>Cartas Pokémon</h2>
             <p>En Mundo Pokémon nos apasiona ofrecer productos auténticos y de la más alta calidad para verdaderos entrenadores. Nuestras cartas coleccionables Pokémon son 100% originales, adquiridas directamente de distribuidores oficiales y cuidadosamente revisadas para garantizar su autenticidad.</p>
             <p>Cada carta pasa por un proceso de tasación profesional, en el que se evalúa su estado, rareza y valor en el mercado, asegurando así que nuestros clientes reciban piezas genuinas y con certificación de calidad. Tanto si eres un coleccionista experimentado como si acabas de comenzar tu aventura, encontrarás cartas únicas, ediciones limitadas y versiones holográficas que harán crecer tu colección con total confianza.</p>
-            <article>
+            <article class="carta-producto">
                 <h3>Mega Venusaur ex (MEG 003)</h3>
                 <figure>
-                    <img src="/assets/images/mega_venosaur.png" alt="Mega Venusaur">
+                    <img src="assets/images/mega_venosaur.png" alt="Mega Venusaur">
                     <figcaption>Carta original tasada y certificada de Mega Venusaur</figcaption>
                 </figure>
                 <p>Es una de las cartas más poderosas y codiciadas de la colección XY. Con su imponente diseño holográfico y su ataque característico “Crisis Vine”, capaz de paralizar y envenenar al oponente, esta carta representa toda la fuerza de los Pokémon tipo Planta.</p>
                 <p>Precio = 36,99 €</p>
                 <form>
-                    <label for="cantidad1">Cantidad:</label>
-                    <input type="number" id="cantidad1" min="1" max="1" value="1">
+                    <label for="cantidad_carta_venusaur">Cantidad:</label>
+                    <input type="number" id="cantidad_carta_venusaur" name="cantidad_carta_venusaur" min="1" max="1" value="1">
                     <button type="submit">Comprar</button>
                 </form>
             </article>
-            <article>
+            <article class="carta-producto">
                 <h3>Mega Latias ex (MEG 100)</h3>
                 <figure>
-                    <img src="/assets/images/mega_latias.png" alt="Mega Latias">
+                    <img src="assets/images/mega_latias.png" alt="Mega Latias">
                     <figcaption>Carta original tasada y certificada de Mega Latias.</figcaption>
                 </figure>
                 <p>Es una carta legendaria que destaca por su elegancia, poder y diseño espectacular. Proveniente de la expansión XY, esta carta representa la fusión perfecta entre velocidad y estrategia, con un arte holográfico que captura el vuelo majestuoso de Latias en todo su esplendor.</p>
                 <p>Precio = 50,99 €</p>
                 <form>
-                    <label for="cantidad2">Cantidad:</label>
-                    <input type="number" id="cantidad2" min="1" max="1" value="1">
+                    <label for="cantidad_carta_latias">Cantidad:</label>
+                    <input type="number" id="cantidad_carta_latias" name ="cantidad_carta_latias" min="1" max="1" value="1">
                     <button type="submit">Comprar</button>
                 </form>
             </article>
         </section>
 
-        <section>
+        <section class="servicios-digital">
             <h2>Servicios digitales</h2>
-            <article>
+            <article class="digital-producto">
                 <h3>Suscripción Entrenador Premium</h3>
-                <img src="assets/images/entrenador_pokemon.jpg" alt="Ash entrenador pokémon">
+                <figure>
+                    <img src="assets/images/entrenador_pokemon.jpg" alt="Ash entrenador pokémon">
+                    <figcaption>Ash en sus aventuras</figcaption>
+                </figure>
                 <p>Conviértete en Entrenador Premium y forma parte de la comunidad que impulsa el mundo Pokémon. Tu suscripción mensual ayuda a mantener la web, mejorar nuestros servicios y seguir creando contenido exclusivo para los verdaderos fans.</p>
                 <ul>
                     <li>Acceso anticipado a noticias y artículos.</li>
