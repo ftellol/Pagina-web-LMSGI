@@ -71,7 +71,7 @@ El uso de (`<figure>`) y (`<figcaption>`) se consideró esencial para mantener l
 - Diseño responsivo mediante flexbox y media queries, asegurando que la página se vea correctamente en móviles y escritorio.
 - Líneas decorativas sobre algunos títulos para separar visualmente secciones.
 - Sombras y bordes redondeados en tarjetas y botones para mejorar la estética y percepción de profundidad.
-- Modo oscuro activable sin JavaScript mediante un checkbox (#darkmode-toggle) y el selector :has(), permitiendo alternar entre modos de forma sencilla y accesible.
+- Modo oscuro automático basado en las preferencias del sistema, utilizando únicamente CSS mediante la media query prefers-color-scheme.
 
 ## Paleta de colores
 La paleta de colores se basa en el logo de la página, con colores vivos y alegres, acorde con la temática Pokémon.
