@@ -32,31 +32,29 @@ body {
 /* ============================
    MODO OSCURO
 ============================ */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-fondo: #0f0f0f;
-        --color-claro: #1a1a1a;
-        --color-azul: #6ca3c4;
-        --color-azul-oscuro: #a6cbe0;
-        --color-naranja: #d97a3a;
-        --color-amarillo: #d6a24d;
-        --color-rojo: #d4644a;
-    }
-
-    body {
-        background-color: var(--color-fondo);
-        color: var(--color-azul-oscuro);
-    }
-
-    footer {
-        --color-azul-oscuro: #11232F;
-        --color-claro: white;
-    }
+body.dark-mode  {
+    --color-fondo: #0f0f0f;
+    --color-claro: #1a1a1a;
+    --color-azul: #6ca3c4;
+    --color-azul-oscuro: #a6cbe0;
+    --color-naranja: #d97a3a;
+    --color-amarillo: #d6a24d;
+    --color-rojo: #d4644a;
 }
 
-/* ================================
+body.dark-mode {
+    background-color: var(--color-fondo);
+    color: var(--color-azul-oscuro);
+}
+
+body.dark-mode footer {
+    --color-azul-oscuro: #11232F;
+    --color-claro: white;
+}
+
+/* =================================
    CABECERA (HEADER)
-   ================================ */
+   =============================== */
 /* Contenedor de la cabecera */
 .cabecera {
     padding: 12px 20px;
@@ -1598,4 +1596,13 @@ textarea {
     .pie ul {
         text-align: center;
     }
+}
+
+.class__div {
+    padding : 10px;
+    margin: 10px 0;
+    background-color: var(--color-claro);
+    color: var(--color-naranja);
+    text-align: center;
+    width: 100%;
 }
