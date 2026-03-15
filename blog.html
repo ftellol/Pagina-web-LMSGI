@@ -18,6 +18,11 @@
             </form>
         </section>
 
+        <label class="toggle-switch">
+            <input type="checkbox" id="modoOscuro">
+            <span class="toggle-slider"></span>
+        </label>
+
         <input type="checkbox" id="btn-menu" class="btn-menu">
         <label for="btn-menu" class="icono-menu">☰ Menú ▼</label>
 
@@ -113,6 +118,42 @@
                     </fieldset>
                 </form>
             </article>
+        </section>
+
+        <section class="blog-formulario">
+            <h2>Publicar una entrada de blog</h2>
+
+            <form>
+                <fieldset class="informacion-blog">
+                    <legend>Información del blog</legend>
+
+                    <label for="titulo-blog">Título del blog:</label>
+                    <input type="text" id="titulo-blog" name="titulo-blog" placeholder="Ejemplo: Vaporeon es el pokemon mas compatible con los humanos?" required>
+
+                    <label for="fecha-publicacion">Fecha de publicación:</label>
+                    <input type="date" id="fecha-publicacion" name="fecha-publicacion" required>
+                </fieldset>
+
+                <fieldset class="contenido-blog">
+                    <legend>Contenido de la entrada</legend>
+
+                    <label for="imagen-blog">Imagen del blog:</label>
+                    <input type="file" id="imagen-blog" name="imagen-blog" accept="image/*">
+
+                    <label for="entrada-blog">Entrada del blog:</label>
+                    <textarea id="entrada-blog" name="entrada-blog" rows="8" placeholder="Escribe aquí el contenido completo de tu entrada de blog..." required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Confirmación</legend>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="confirmacion" required>
+                        Confirmo que esta entrada es contenido original y apto para publicar.
+                    </label>
+                </fieldset>
+
+                <button type="submit">Publicar entrada</button>
+            </form>
         </section>
 
         <section class="blog-eventos">
